@@ -10,12 +10,12 @@ Cambio DType
 
 Ortotipografia
 1. Definir columnas a renombrar:
-2. Cambiar todo a minúscular, definir en qué columnas:
+2. Cambiar todo a minúsculas, definir en qué columnas: ANA
 
 Otros
 1. remotework > unificar a yes/no (ahora está yes/no, true/false, 1/0)
 2. gender > unificar de 0/1 a male/female
 3. Cambiar nan por none: marital status, businesstravel, department, educationfield, hourlyrate, monthlyincome,
-						over18, overtime, standardhours, yearsincurrentrole, roledepartament, numberchildren, salary  
-4. Ponerle dos decimales al dailyrate
+						over18, overtime, standardhours, yearsincurrentrole, roledepartament, numberchildren, salary  ANA
+4. Ponerle dos decimales al dailyrate ANA
 5. Poner el significado de cada numero en education?
