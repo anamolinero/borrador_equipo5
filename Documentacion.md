@@ -30,7 +30,7 @@ Para alcanzar los objetivos definidos, se aplicó la siguiente metodología en c
 
 - Tratamiento de Formatos Inadecuados: Se realizaron conversiones de tipo de datos cuando fue necesario para facilitar el análisis (conversión de columnas de texto que representan números a tipo numérico).
 
-***3.3. Gestión de Valores Nulos***
+***3. Gestión de Valores Nulos***
 
 - Detección y Evaluación: Se identificaron las columnas con valores nulos y se calculó el porcentaje de datos faltantes en cada una. Se analizó la distribución de los valores nulos para identificar posibles patrones o sesgos en su ausencia.
 
