@@ -24,7 +24,7 @@ Para alcanzar los objetivos definidos, se aplicó la siguiente metodología en c
 
 ***2. Limpieza de Datos***
 
-- Identificación de Inconsistencias: Se buscaron inconsistencias en el formato de los datos (fechas, texto, etc.), errores tipográficos en variables categóricas y posibles duplicados.
+- Identificación de Inconsistencias: Se buscaron inconsistencias en el formato de los datos (números, texto, etc.), errores tipográficos en variables categóricas y posibles duplicados.
 
 - Corrección de Errores: Se aplicaron técnicas para corregir los errores identificados, como la estandarización de formatos, la corrección de erratas (cuando fue posible con un alto grado de certeza) y la eliminación de duplicados (basándose en criterios definidos).
 
