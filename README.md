@@ -26,7 +26,7 @@ Estandarizamos los nombres de columnas para facilitar su análisis.
 
 Tratamos valores faltantes o inconsistencias.
 
-Convertimos variables categóricas (como género o estado civil) en formatos más legibles.
+Realizamos un análisis exhaustivo de los nulos, imputando los que eran necesarios.
 
 Agrupamos niveles poco frecuentes y normalizamos valores para facilitar las visualizaciones.
 
@@ -58,7 +58,8 @@ Existen diferencias por género y estado civil que podrían requerir políticas 
 
 Algunos departamentos y roles tienen mayor concentración de insatisfacción o menor representación de ciertos perfiles, lo que podría indicar un riesgo de rotación.
 
-## 🔮 5. Próximos pasos recomendados (Next Steps)
+## 🔮 5. Recomendaciones para ABC Corporation
+
 Encuesta de satisfacción más detallada, incluyendo aspectos como liderazgo, equilibrio vida-trabajo y carga emocional.
 
 Implementar una política flexible de trabajo remoto, al menos en los departamentos donde es viable.
