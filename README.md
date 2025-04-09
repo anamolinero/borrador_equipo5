@@ -2,73 +2,109 @@
 
 Cliente: ABC Corporation
 
-Equipo de análisis: Consultores de Data Analytics
+Equipo de análisis: Consultoras de Data Analytics
 
 Objetivo: Identificar los factores clave que influyen en la satisfacción laboral y la retención del talento en la empresa.
 
-## 🧩 1. Exploración inicial del conjunto de datos
+## 🛠️ Tecnologías Utilizadas:
+
+💻 Lenguajes: Python y MySQL.
+
+🔗 Uso de funciones y bucles para reutilización e imputación de datos nulos o duplicados.
+
+
+## 🧩 Fase 1. Exploración inicial del conjunto de datos (EDA)
 Iniciamos el proyecto realizando una revisión detallada de la base de datos interna de recursos humanos de ABC Corporation. Esta contenía información sobre:
 
-Género, edad, estado civil y nivel educativo
+- Género, edad, estado civil y nivel educativo
 
-Cargo (Job Role), departamento, tipo de jornada
+- Cargo (Job Role), departamento, tipo de jornada
 
-Indicadores de satisfacción: ambiente laboral, trabajo remoto, oportunidades de formación, etc.
+- Indicadores de satisfacción: ambiente laboral, trabajo remoto, oportunidades de formación, etc.
 
-Datos sobre rotación de empleados (quién ha dejado la empresa y quién permanece)
+- Datos sobre rotación de empleados (quién ha dejado la empresa y quién permanece)
 
-Este paso nos permitió entender la estructura del conjunto de datos y comenzar a generar hipótesis sobre los factores que podrían estar afectando la satisfacción y retención.
+Luego de revisar cada columna, buscamos filas duplicadas, eliminamos columnas que no aportaban valor, identificamos valores únicos y erratas. Analizamos la estructura y longitud de los datos y finalmente exploramos los datos nulos.
 
-## 🧹 2. Limpieza y transformación de los datos
-Una vez identificadas las columnas relevantes:
 
-Estandarizamos los nombres de columnas para facilitar su análisis.
+## 🧹 Fase 2. Limpieza y transformación de los datos
+Una vez exploradas las columnas en el EDA realizamos las siguientes transformaciones:
 
-Tratamos valores faltantes o inconsistencias.
+- Identificamos posibles patrones para realizar la imputación de los nulos que consideramos necesarios.
 
-Realizamos un análisis exhaustivo de los nulos, imputando los que eran necesarios.
+- Eliminamos columnas que no aportaban valor.
 
-Agrupamos niveles poco frecuentes y normalizamos valores para facilitar las visualizaciones.
+- Tratamos valores inconsistentes y corregimos errores de sintaxis.
 
-## 📊 3. Análisis exploratorio con visualizaciones estratégicas
-Realizamos múltiples visualizaciones para detectar patrones ocultos y relaciones significativas:
+- Estandarizamos los nombres de columnas para facilitar su análisis.
 
-👩‍💼 Género y roles:
-Gráfico de barras: proporción de hombres y mujeres en la empresa.
+- Agrupamos valores para facilitar las visualizaciones.
 
-Cruce entre Job Role y género: identificamos posibles sesgos de distribución de género en ciertos roles.
+Este paso nos permitió tener una BBDD limpia y así entender la estructura del conjunto de datos y comenzar a generar hipótesis sobre los factores que podrían estar afectando la satisfacción y cómo lograr la retención del empleado.
 
-💍 Estado civil y género:
-Observamos diferencias significativas en la representación por género en función del estado civil, lo que podría influir en las necesidades de conciliación.
+## 📊 Fase 3. Análisis exploratorio con visualizaciones estratégicas
+Realizamos múltiples visualizaciones para detectar patrones y correlaciones significativas:
+
+🧩 Grafica de correlación con variables numéricas:
+
+Esta gráfica nos permitió identificar las variables que tenían una relación fuerte y valorar si eran relevantes. 
+
+👩‍💼 Puestos vs Rotación:
+
+ Analizamos los puestos que tienen alta rotación como Sales Executive y baja rotación como Human Resources.
+
+⚠️ Género y puesto de trabajo:
+
+Esta gráfica nos permitió observar que existe una brecha de género bastante marcada (mayor % de hombres vs % de mujeres) sobre todo en puestos técnicos, científicos y de ventas. 
 
 🏡 Trabajo remoto y satisfacción:
-Gráficos de pastel: compararon niveles de satisfacción del ambiente laboral con el trabajo remoto.
 
-Se observó una mayor satisfacción en empleados con posibilidad de trabajo remoto.
+En esta ocasión con esta gráfica concluímos que el teletrabajo no es una causa de renuncia, sin embargo hay que destacar que los empleados que realizan trabajo en remoto están más satisfechos que los empleados que trabajan de forma presencial.
 
-🏢 Distribución de empleados por departamento:
-Gráfico de pastel: permite ver la concentración de personal en departamentos clave, útil para priorizar políticas internas.
+🏢 Porcentaje de empleados por departamento vs rotación:
 
-## 🚀 4. Conclusiones clave y recomendaciones
-Hallazgos más relevantes:
+Esta gráfica nos permitió analizar dónde se concentra el mayor % de empleados por departamento, y la rotación de los mismos, siendo el grueso en puestos técnicos, científicos y de ventas. 
 
-La satisfacción con el ambiente de trabajo y la posibilidad de trabajo remoto son factores críticos en la percepción del bienestar laboral.
+## 📃 Fase 4. Diseño de BBDD e Insercción de los Datos 
 
-Existen diferencias por género y estado civil que podrían requerir políticas personalizadas.
+Conectamos las base de datos que creamos en SQL con los datos que teníamos limpios desde Python. 
 
-Algunos departamentos y roles tienen mayor concentración de insatisfacción o menor representación de ciertos perfiles, lo que podría indicar un riesgo de rotación.
+Dividiendo los datos en tres tablas:
+- Detalles del empleado
+- Detalles del puesto de trabajo
+- Detalles de la encuesta de satisfacción laboral.
 
-## 🔮 5. Recomendaciones para ABC Corporation
+Considerando la columna ID_empleado como la que conecta a las tres tablas (Primary Key). 
+Esta fase nos permitió continuar analizando las relaciones entre las columnas para ayudar a la empresa a conseguir sus objetivos.
 
-Encuesta de satisfacción más detallada, incluyendo aspectos como liderazgo, equilibrio vida-trabajo y carga emocional.
+## 🔮 Recomendaciones para ABC Corporation
 
-Implementar una política flexible de trabajo remoto, al menos en los departamentos donde es viable.
+- Crear un plan para la reducción de la brecha de género, sobretodo algunos puestos podrían requerir políticas personalizadas.
 
-Realizar un análisis trimestral de indicadores de clima laboral para detectar señales tempranas de riesgo.
+- Implementar programas de retención específicos para empleados jóvenes y aquellos con menos tiempo en la compañía.
 
-Crear planes de desarrollo y mentoría personalizados, especialmente para perfiles críticos o con baja representación.
+- Encuesta de satisfacción más detallada, incluyendo aspectos como liderazgo, carga emocional y para los empleados que renuncian el motivo (categorizado) de la misma.
 
-Incorporar este análisis en la plataforma de selección inteligente, mejorando la retención desde el proceso de reclutamiento.
+- Hemos identificado que algunos departamentos y roles tienen mayor concentración de insatisfacción lo que podría indicar un riesgo de rotación.
 
-## ✅ Resultado final
-Este análisis permite a ABC Corporation tomar decisiones basadas en datos reales de sus empleados, con una visión clara y orientada a la acción. Está pensado para potenciar la productividad, reducir la rotación y consolidar una cultura organizacional sostenible, alineada con el crecimiento y la innovación que caracteriza a la empresa.
+- Realizar un análisis trimestral de indicadores de clima laboral para detectar señales tempranas de riesgo.
+
+- Crear planes de desarrollo y mentoría personalizados, especialmente para perfiles críticos o imprescindibles para la empresa.
+
+- Incorporar este análisis en la plataforma de selección inteligente, mejorando la retención de personal desde el proceso de reclutamiento.
+
+## 🚀 Retos y aprendizajes
+
+- Aprendizaje y conocimiento en paralelo.
+
+- Interpretación diversa y consenso a posteriori de cada miembro del equipo.
+
+- Importancia del conocimiento de los datos y  las preguntas clave.
+
+- La calidad de una base de datos explorada y limpiada de una forma correcta contribuyen a un análisis eficiente, y conclusiones acertadas. 
+
+
+## 📩 Contacto
+Si tienes preguntas o sugerencias, no dudes en contactarnos a hello@3DataHers.com estaremos encantadas de absolver tus dudas!
+
+✨ ¡Gracias por tu interés en nuestro proyecto y seguimos en contacto! 🎉
